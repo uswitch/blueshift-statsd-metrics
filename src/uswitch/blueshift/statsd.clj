@@ -22,4 +22,4 @@
       (assoc this :reporter nil))))
 
 (defn statsd-reporter [config registry]
-  (map->Reporter {:config config :registry registry}))
+  (map->Reporter {:config (:statsd config) :registry registry}))
